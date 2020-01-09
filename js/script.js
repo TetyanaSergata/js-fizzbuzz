@@ -9,19 +9,19 @@
 var risultato;
 
 for (var i = 1; i <= 100; i++){
-  console.log(i);
 
-  if(i % 3 === 0 ){
-    risultato = 'Fizz';
+  if(i % 3 === 0 && i % 5 === 0 ){
+    risultato = 'FizzBuzz';
     console.log(risultato);
   }else if (i % 5 === 0 ) {
-
-    console.log('Buzz');
+    risultato = 'Buzz';
+    console.log(risultato);
   }
-  else if (i % 3 === 0 && i % 5 === 0) {
-    console.log('FizzBuzz');
+  else if (i % 3 === 0) {
+    risultato = 'Fizz';
+    console.log(risultato);
   }
   else {
-    // console.log(i);
+    console.log(i);
   }
 }
