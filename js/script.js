@@ -6,22 +6,26 @@
 // che di 5 stampi FizzBuzz.
 
 // Stampare  i numeri da 1 a 100
-var risultato;
+var numberList = '';
+var result;
 
 for (var i = 1; i <= 100; i++){
 
-  if(i % 3 === 0 && i % 5 === 0 ){
-    risultato = 'FizzBuzz';
-    console.log(risultato);
-  }else if (i % 5 === 0 ) {
-    risultato = 'Buzz';
-    console.log(risultato);
+  if (i % 3 === 0 && i % 5 === 0 ) {
+    result = 'FizzBuzz';
+
+  } else if (i % 5 === 0 ) {
+    result = 'Buzz';
+
+  } else if (i % 3 === 0) {
+    result = 'Fizz';
+
+  } else {
+    result = i;
   }
-  else if (i % 3 === 0) {
-    risultato = 'Fizz';
-    console.log(risultato);
-  }
-  else {
-    console.log(i);
-  }
+  // numberList = document.getElementById('number_list').innerHTML;
+  // document.getElementById('number_list').innerHTML = numberList + '<li>' + result + '</li>';
+  console.log(result);
+  numberList += '<li>' + result + '</li>';
 }
+document.getElementById('number_list').innerHTML = numberList;
